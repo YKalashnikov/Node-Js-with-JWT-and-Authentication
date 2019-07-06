@@ -14,9 +14,11 @@ mongoose.connect(
 
 //Routes
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 app.use(express.json())
 
 app.use("/api/user", authRoute);
+app.use("/api", postRoute);
 
 
 const PORT = 3000;
